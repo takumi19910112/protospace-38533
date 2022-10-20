@@ -25,6 +25,7 @@ class PrototypesController < ApplicationController
       @comment = Comment.new
       @comments = @prototype.comments.includes(:user)
       prototype = Prototype.find(params[:id])
+      user = User.find(params[:id])
     end
 
     def edit
